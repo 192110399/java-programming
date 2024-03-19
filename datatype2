@@ -1,0 +1,36 @@
+public class DataTypeConversionDemo {
+    public static void main(String[] args) {
+        // Implicit (widening) conversion
+        int intValue = 100;
+        long longValue = intValue; // Implicit conversion from int to long
+        float floatValue = intValue; // Implicit conversion from int to float
+        double doubleValue = floatValue; // Implicit conversion from float to double
+
+        // Explicit (narrowing) conversion
+        double doubleVal = 123456.789;
+        float floatVal = (float) doubleVal; // Explicit conversion from double to float
+        long longVal = (long) doubleVal; // Explicit conversion from double to long
+        int intVal = (int) longVal; // Explicit conversion from long to int
+
+        // Overflow and underflow scenarios
+        int maxValue = Integer.MAX_VALUE;
+        int overflowValue = maxValue + 1; // Overflow scenario
+        int minValue = Integer.MIN_VALUE;
+        int underflowValue = minValue - 1; // Underflow scenario
+
+        // Output values
+        System.out.println("Implicit (Widening) Conversion:");
+        System.out.println("int to long: " + longValue);
+        System.out.println("int to float: " + floatValue);
+        System.out.println("float to double: " + doubleValue);
+
+        System.out.println("\nExplicit (Narrowing) Conversion:");
+        System.out.println("double to float: " + floatVal);
+        System.out.println("double to long: " + longVal);
+        System.out.println("long to int: " + intVal);
+
+        System.out.println("\nOverflow and Underflow Scenarios:");
+        System.out.println("Overflow Value: " + overflowValue); // Will print a negative value due to overflow
+        System.out.println("Underflow Value: " + underflowValue); // Will print a positive value due to underflow
+    }
+}
