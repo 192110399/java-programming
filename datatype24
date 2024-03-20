@@ -1,0 +1,44 @@
+class Calculator {
+    // Method to calculate sum of two integers
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    // Overloading by increasing the number of parameters
+    int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloading by decreasing the number of parameters
+    int sum(int a) {
+        return a;
+    }
+
+    // Overloading by changing the data types of parameters
+    double sum(double a, double b) {
+        return a + b;
+    }
+
+    // Overloading by interchanging the parameters
+    int sum(int b, int a) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        // Overloading by increasing the number of parameters
+        System.out.println("Sum of 3 numbers: " + calculator.sum(10, 20, 30));
+
+        // Overloading by decreasing the number of parameters
+        System.out.println("Sum of one number: " + calculator.sum(5));
+
+        // Overloading by changing the data types of parameters
+        System.out.println("Sum of doubles: " + calculator.sum(10.5, 20.5));
+
+        // Overloading by interchanging the parameters
+        System.out.println("Sum with interchanged parameters: " + calculator.sum(7, 3));
+    }
+}
