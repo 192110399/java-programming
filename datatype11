@@ -1,23 +1,18 @@
 public class AgeDifference {
     public static void main(String[] args) {
-        // Age of the person when his younger brother is 24
+   	// Age of the person when his younger brother is 24
         int personAge = 28;
         int youngerBrotherAge = 24;
-
-        // Calculate the age difference
+	// Calculate the age difference
         int ageDifference = personAge - youngerBrotherAge;
-
-        // Calculate the age of the older brother
+	// Calculate the age of the older brother
         int olderBrotherAge = 56;
-
-        // Calculate the person's age when the older brother is 56
+	// Calculate the person's age when the older brother is 56
         int personAgeAtOlderBrother56 = olderBrotherAge - ageDifference;
-
-        // Calculate the age of the younger brother when the older brother was 5
+	// Calculate the age of the younger brother when the older brother was 5
         int olderBrotherAgeAtYoungerBrother5 = 5;
         int youngerBrotherAgeAtOlderBrother5 = olderBrotherAgeAtYoungerBrother5 - ageDifference;
-
-        // Output the results
+	// Output the results
         System.out.println("The person's age when the older brother is 56: " + personAgeAtOlderBrother56);
         System.out.println("The age of the younger brother when the older brother was 5: " + youngerBrotherAgeAtOlderBrother5);
     }
