@@ -1,0 +1,60 @@
+// Tree interface
+interface Tree {
+    void fruits(int quantity, String type);
+    void leaves(int count, String color, String shape);
+    void flowers(int count, String color, String fragrance, String season);
+}
+
+// Branch1 class implementing Tree interface
+class Branch1 implements Tree {
+    @Override
+    public void fruits(int quantity, String type) {
+        System.out.println("Branch 1 has " + quantity + " " + type + " fruits.");
+    }
+
+    @Override
+    public void leaves(int count, String color, String shape) {
+        System.out.println("Branch 1 has " + count + " " + color + " " + shape + " leaves.");
+    }
+
+    @Override
+    public void flowers(int count, String color, String fragrance, String season) {
+        System.out.println("Branch 1 has " + count + " " + color + " flowers with " + fragrance + " fragrance in " + season + ".");
+    }
+}
+
+// Branch2 class implementing Tree interface
+class Branch2 implements Tree {
+    @Override
+    public void fruits(int quantity, String type) {
+        System.out.println("Branch 2 has " + quantity + " " + type + " fruits.");
+    }
+
+    @Override
+    public void leaves(int count, String color, String shape) {
+        System.out.println("Branch 2 has " + count + " " + color + " " + shape + " leaves.");
+    }
+
+    @Override
+    public void flowers(int count, String color, String fragrance, String season) {
+        System.out.println("Branch 2 has " + count + " " + color + " flowers with " + fragrance + " fragrance in " + season + ".");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects of Branch1 and Branch2
+        Branch1 branch1 = new Branch1();
+        Branch2 branch2 = new Branch2();
+
+        // Calling methods of Branch1
+        branch1.fruits(5, "apple");
+        branch1.leaves(10, "green", "oval");
+        branch1.flowers(3, "white", "sweet", "spring");
+
+        // Calling methods of Branch2
+        branch2.fruits(8, "orange");
+        branch2.leaves(15, "yellow", "round");
+        branch2.flowers(6, "pink", "fragrant", "summer");
+    }
+}
